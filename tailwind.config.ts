@@ -1,19 +1,19 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import hocusPlugin from 'tailwindcss-hocus';
+import typography from '@tailwindcss/typography';
+
+import colors from 'tailwindcss/colors';
 
 const config: Config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
+	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+	darkMode: 'class',
+	theme: {
+		extend: {
+			colors: {
+				primary: colors.yellow
+			}
+		}
+	},
+	plugins: [hocusPlugin, typography]
 };
 export default config;
