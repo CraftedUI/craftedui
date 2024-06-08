@@ -13,7 +13,7 @@ export default function Header() {
 				<Link href='/'>
 					<div className='flex items-center gap-1'>
 						<Hamburger height={20} width={20} className='block md:hidden' />
-						<Logo withoutBg className='fill-primary-600' width={36} height={36} />
+						<Logo withoutBg className='fill-black dark:fill-white' width={36} height={36} />
 						<div className='md:block hidden'>
 							<span className='text-base font-medium text-zinc-800 dark:text-zinc-200'>Crafted</span>
 							<span className='text-primary-600 text-xs font-semibold pl-0.5'>UI</span>
