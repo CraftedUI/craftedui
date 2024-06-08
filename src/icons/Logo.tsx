@@ -1,26 +1,18 @@
-import clsx from 'clsx';
-import { SVGProps } from 'react';
+import cn from '@/utils/cn';
+import { IconType } from './types';
 
-type Props = SVGProps<any> & {
-	inverted?: boolean;
-	withoutBg?: boolean;
-};
 export default function Logo({
 	className,
 	inverted = false,
 	withoutBg = false,
-	width = '256px',
-	height = '256px',
+	width = 24,
+	height = 24,
 	...props
-}: Props) {
+}: IconType) {
 	return (
 		<svg
 			{...props}
-			className={clsx(
-				'bg-primary-300 fill-white stroke-white rounded-lg',
-				className,
-				withoutBg ? '!bg-transparent' : ''
-			)}
+			className={cn(className, withoutBg ? '!bg-transparent' : '')}
 			width={width}
 			height={height}
 			viewBox='-6.4 -6.4 76.80 76.80'

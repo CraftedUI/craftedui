@@ -6,11 +6,11 @@ import colors from 'tailwindcss/colors';
 
 const config: Config = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-	darkMode: 'class',
+	darkMode: 'selector',
 	theme: {
 		extend: {
 			colors: {
-				primary: colors.yellow
+				primary: colors.violet
 			}
 		}
 	},

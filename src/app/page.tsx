@@ -1,9 +1,5 @@
 import Logo from '@/icons/Logo';
 
 export default function Home() {
-	return (
-		<main className='flex min-h-screen flex-col items-center justify-between p-24 '>
-			<Logo className='' />
-		</main>
-	);
+	return <main className='flex min-h-screen flex-col items-center justify-between p-24 '>a</main>;
 }
