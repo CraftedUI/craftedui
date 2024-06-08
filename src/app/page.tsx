@@ -1,5 +1,9 @@
-import Logo from '@/icons/Logo';
+import Home from '@/components/Home';
 
-export default function Home() {
-	return <main className='flex min-h-screen flex-col items-center justify-between p-24 '>a</main>;
+export default function HomePage() {
+	return (
+		<main className='flex flex-col mt-16'>
+			<Home />
+		</main>
+	);
 }
