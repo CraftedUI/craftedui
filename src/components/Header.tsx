@@ -8,14 +8,14 @@ import Github from '@/icons/Github';
 
 export default function Header() {
 	return (
-		<header className='flex justify-between w-full items-center px-8 py-2 fixed top-0 z-50 h-auto border-b backdrop-blur-sm backdrop-saturate-150'>
+		<header className='flex justify-between w-full items-center px-8 py-2 fixed top-0 z-50 h-auto border-b border-b-zinc-300 dark:border-b-zinc-700 backdrop-blur-sm backdrop-saturate-150'>
 			<div className='flex items-center gap-3'>
 				<Link href='/'>
 					<div className='flex items-center gap-1'>
 						<Hamburger height={20} width={20} className='block md:hidden' />
-						<Logo withoutBg className='fill-primary-600' width={36} height={36} />
+						<Logo withoutBg className='fill-black dark:fill-white' width={36} height={36} />
 						<div className='md:block hidden'>
-							<span className='text-base font-medium text-zinc-800'>Crafted</span>
+							<span className='text-base font-medium text-zinc-800 dark:text-zinc-200'>Crafted</span>
 							<span className='text-primary-600 text-xs font-semibold pl-0.5'>UI</span>
 						</div>
 					</div>
@@ -26,7 +26,7 @@ export default function Header() {
 						<li className='px-1'>
 							<Link
 								href='/components'
-								className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-300 dark:hocus:text-white'
+								className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white'
 							>
 								Components
 							</Link>
@@ -34,7 +34,7 @@ export default function Header() {
 						<li className='px-1'>
 							<Link
 								href='/contact'
-								className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-300 dark:hocus:text-white'
+								className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white'
 							>
 								Contact
 							</Link>
@@ -43,7 +43,7 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<div className='flex gap-2'>
+			<div className='gap-2 items-center hidden sm:flex'>
 				<Search />
 				<div className='flex items-center gap-3'>
 					<ThemeToggle />
