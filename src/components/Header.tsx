@@ -58,9 +58,10 @@ export default function Header() {
 		<>
 			<header
 				className={cn(
-					'w-full px-8 py-2 fixed top-0 z-50 h-auto border-b',
-					'border-b-zinc-300 dark:border-b-zinc-700 backdrop-blur-sm backdrop-saturate-150',
+					'w-full px-8 py-2 fixed top-0 z-50 h-auto',
+					'backdrop-blur-sm backdrop-saturate-150',
 					'flex items-center justify-between'
+					// 'border border-b-zinc-300 dark:border-b-zinc-700'
 				)}
 			>
 				<div className='flex items-center gap-6'>
@@ -93,7 +94,7 @@ export default function Header() {
 
 			<div
 				className={cn(
-					'md:hidden flex flex-col gap-4 w-full transition-transform px-3 fixed z-50 bg-white dark:bg-black',
+					'md:hidden flex flex-col gap-4 w-full transition-transform px-3 fixed z-50 backdrop-blur-lg backdrop-saturate-150',
 					openHam ? 'h-screen' : 'h-0 overflow-hidden'
 				)}
 			>
