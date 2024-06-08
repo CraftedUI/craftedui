@@ -31,7 +31,7 @@ export default function Search() {
 	}, []);
 
 	return (
-		<div className='hidden md:block md:max-w-md md:flex-auto'>
+		<div className='hidden md:block md:max-w-md '>
 			<button
 				type='button'
 				onClick={() => setIsOpen(true)}
