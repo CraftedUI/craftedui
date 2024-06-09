@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Twitter({
+export default function TwitterIcon({
 	className,
 	inverted = false,
 	withoutBg = false,

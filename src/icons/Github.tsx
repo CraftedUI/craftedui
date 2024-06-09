@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Github({
+export default function GithubIcon({
 	className,
 	inverted = false,
 	withoutBg = false,

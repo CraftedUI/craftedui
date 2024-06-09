@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function FramerMotion({
+export default function FramerMotionIcon({
 	className,
 	inverted = false,
 	withoutBg = false,
