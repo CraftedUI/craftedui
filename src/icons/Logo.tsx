@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Logo({
+export default function LogoIcon({
 	className,
 	inverted = false,
 	withoutBg = false,

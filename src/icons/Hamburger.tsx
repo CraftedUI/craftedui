@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Hamburger({
+export default function HamburgerIcon({
 	className,
 	inverted = false,
 	withoutBg = false,

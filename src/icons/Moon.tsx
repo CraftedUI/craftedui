@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Moon({
+export default function MoonIcon({
 	className,
 	inverted = false,
 	withoutBg = false,

@@ -1,7 +1,7 @@
 import cn from '@/utils/cn';
 import { IconType } from './types';
 
-export default function Sun({
+export default function SunIcon({
 	className,
 	inverted = false,
 	withoutBg = false,
