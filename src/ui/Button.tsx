@@ -16,11 +16,11 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>(
 	({ as = 'button', variant = 'primary', size = 'default', className, ...props }, ref) => {
 		const variants = {
 			primary:
-				'bg-primary-800 text-neutral-50 hover:bg-primary-800/90 dark:bg-primary-50 dark:text-neutral-900 dark:hover:bg-primary-50/90',
+				'bg-primary-800 text-neutral-50 hover:bg-primary-800/90 dark:bg-primary-50 dark:text-neutral-900 dark:hover:bg-primary-100/90',
 			destructive:
 				'bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90',
 			outline:
-				'border border-neutral-200 bg-white hover:bg-primary-100/80 hover:text-neutral-900 dark:border-neutral-800 dark:bg-primary-600 dark:hover:bg-primary-600 dark:hover:text-neutral-50',
+				'border border-neutral-200 bg-white hover:bg-primary-100/80 hover:text-neutral-900 dark:border-neutral-800 dark:bg-black dark:hover:bg-zinc-900/90 dark:hover:text-neutral-50',
 			secondary:
 				'bg-primary-100 text-neutral-900 hover:bg-primary-100/80 dark:bg-primary-600 dark:text-neutral-50 dark:hover:bg-primary-600/80',
 			ghost: 'hover:bg-primary-100 hover:text-neutral-900 dark:hover:bg-primary-600 dark:hover:text-neutral-50',
