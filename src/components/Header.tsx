@@ -8,16 +8,23 @@ import Twitter from '@/icons/Twitter';
 import Github from '@/icons/Github';
 import cn from '@/utils/cn';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
 	const [openHam, setOpenHam] = useState<boolean>(false);
+	const [activeNavItem, setactiveNavItem] = useState('home');
+	const pathname = usePathname();
 	const nav = (
 		<nav className='md:flex-1'>
 			<ul className='flex flex-col md:flex-row md:items-center gap-2'>
 				<li className='px-1'>
 					<Link
 						href='/components'
-						className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white'
+						onClick={() => setactiveNavItem('components')}
+						className={cn(
+							'transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
+							activeNavItem === 'component' || pathname.includes('/component') ? 'text-black dark:text-white' : ''
+						)}
 					>
 						Components
 					</Link>
@@ -25,7 +32,11 @@ export default function Header() {
 				<li className='px-1'>
 					<Link
 						href='/contact'
-						className='transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white'
+						onClick={() => setactiveNavItem('contact')}
+						className={cn(
+							'transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
+							activeNavItem === 'contact' || pathname.includes('/contact') ? 'text-black dark:text-white' : ''
+						)}
 					>
 						Contact
 					</Link>
