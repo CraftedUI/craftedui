@@ -20,11 +20,11 @@ export default function LogoIcon({
 			xmlSpace='preserve'
 			xmlns='http://www.w3.org/2000/svg'
 			xmlnsXlink='http://www.w3.org/1999/xlink'
-			stroke-width='0.384'
+			strokeWidth='0.384'
 			transform='matrix(1, 0, 0, 1, 0, 0)rotate(0)'
 		>
-			<g id='SVGRepo_bgCarrier' stroke-width='0'></g>
-			<g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g>
+			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
 			<g id='SVGRepo_iconCarrier'>
 				{' '}
 				<g id='orgami'>
