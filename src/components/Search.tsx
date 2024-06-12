@@ -30,6 +30,25 @@ export default function Search() {
 		setModifierKey(/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘' : 'Ctrl ');
 	}, []);
 
+	useEffect(() => {
+		if (isOpen) {
+			return;
+		}
+
+		function onKeyDown(event: KeyboardEvent) {
+			if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+				event.preventDefault();
+				setIsOpen(true);
+			}
+		}
+
+		window.addEventListener('keydown', onKeyDown);
+
+		return () => {
+			window.removeEventListener('keydown', onKeyDown);
+		};
+	}, [isOpen, setIsOpen]);
+
 	return (
 		<div className='hidden md:block md:max-w-md '>
 			<button
