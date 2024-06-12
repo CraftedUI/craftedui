@@ -6,6 +6,7 @@
 // import { SectionProvider, type Section } from '@/components/SectionProvider';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Footer from './Footer';
 
 export default function ContentLayout({
 	children,
@@ -26,7 +27,7 @@ export default function ContentLayout({
 			</motion.header>
 			<div className='relative flex max-h-full min-h-screen flex-col px-4 pt-14 sm:px-6 lg:px-8'>
 				<main className='flex-auto'>{children}</main>
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		</div>
 		// </SectionProvider>
