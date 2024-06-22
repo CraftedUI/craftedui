@@ -1,5 +1,6 @@
 import ContentLayout from '@/components/ContentLayout';
 import { extractPaths } from '@/utils/paths';
+import './global.css';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const paths = await extractPaths();
