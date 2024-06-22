@@ -7,7 +7,7 @@ export default function Navigation({
 	allSections,
 	className
 }: {
-	allSections: Record<string, string[]>;
+	allSections?: Record<string, string[]>;
 	className?: string;
 }) {
 	let pathname = usePathname();
@@ -17,7 +17,7 @@ export default function Navigation({
 
 		const [category, subcategory] = parts;
 
-		if (allSections[category]) {
+		if (allSections && allSections[category]) {
 			if (subcategory && allSections[category].includes(subcategory)) {
 				return { category, subcategory };
 			}
@@ -27,7 +27,7 @@ export default function Navigation({
 
 	return (
 		<nav className={cn(className)}>
-			{Object.entries(allSections)?.map(([category, subCategories]) => (
+			{Object.entries(allSections || {})?.map(([category, subCategories]) => (
 				<ul className='pl-2 pt-2'>
 					<li>
 						<Link href={`/${category}`} className='font-semibold text-zinc-800 dark:text-zinc-300'>

@@ -12,7 +12,7 @@ import { Button } from '@/ui/Button';
 export default function Home() {
 	return (
 		<section className=''>
-			<div className='sm:max-w-md md:max-w-xl max-w-sm flex flex-col items-center gap-3 mx-auto relative my-40'>
+			<div className='sm:max-w-md md:max-w-xl max-w-sm flex flex-col items-center gap-4 mx-auto relative my-40'>
 				<Spotlight className='top-[0%] left-[40%] w-full h-full' />
 				<Logo width={100} height={100} className='bg-black  fill-white dark:bg-white dark:fill-black rounded-lg' />
 
@@ -25,13 +25,13 @@ export default function Home() {
 				</span>
 
 				<div className='flex flex-col sm:flex-row items-center gap-8 self-start mt-4'>
-					<Button as='a' href='/components' className='hover:shadow-xl md:w-52 w-36 !rounded-lg' size='xl'>
-						<span className='font-semibold'>Get Started</span>
+					<Button as='a' href='/components' className='hover:shadow-xl md:w-48 w-28 !rounded-lg' size='xl'>
+						<span className='font-semibold'>Explore</span>
 					</Button>
 					<Button
 						as='a'
 						href='/contact'
-						className='hover:shadow-xl md:w-52 w-36 !rounded-lg'
+						className='hover:shadow-xl md:w-48 w-28 !rounded-lg'
 						size='xl'
 						variant='outline'
 					>

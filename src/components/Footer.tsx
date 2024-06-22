@@ -16,19 +16,23 @@ export default function Footer() {
 			<div className='grid grid-cols-2 gap-8 dark:text-zinc-400 text-zinc-500 text-sm '>
 				<ul className='space-y-2'>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
-						<Link href='/components'>Components</Link>
+						<Link href='/components'>Explore</Link>
 					</li>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
-						<Link href='/components'>Contact</Link>
+						<Link href='/contact'>Contact</Link>
 					</li>
 				</ul>
 
 				<ul className='space-y-2'>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
-						<Link href='/components'>Github</Link>
+						<Link href='https://github.com/CraftedUI/craftedui' target='_blank'>
+							Github
+						</Link>
 					</li>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
-						<Link href='/components'>Twitter</Link>
+						<Link href='https://x.com/_CraftedUI' target='_blank'>
+							X
+						</Link>
 					</li>
 				</ul>
 			</div>
