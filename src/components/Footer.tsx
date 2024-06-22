@@ -2,12 +2,13 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className='mx-auto flex justify-between w-full border-t border-zinc-300 dark:border-zinc-700 py-7 my-7 backdrop-blur-lg'>
+		<footer className='mx-auto flex flex-col sm:flex-row gap-12 sm:gap-0 justify-between w-full border-t border-zinc-300 dark:border-zinc-700 py-7 my-7 px-12 sm:px-0 backdrop-blur-lg'>
 			<div className='text-sm dark:text-zinc-400 text-zinc-500  font-medium'>
-				Building in public at{' '}
+				Building in public by{' '}
 				<Link href='https://x.com/ShubhInTech' target='_blank' className='font-semibold underline underline-offset-2'>
 					@shubhintech
-				</Link>{' '}
+				</Link>
+				{' and '}
 				<Link href='https://x.com/Dinezh256' target='_blank' className='font-semibold underline underline-offset-2'>
 					@dinezh256
 				</Link>
