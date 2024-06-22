@@ -47,17 +47,17 @@ export default function Home() {
 
 					<div className='flex gap-2 items-center'>
 						<ReactIcon width={28} height={28} className='stroke-none fill-zinc-500 dark:fill-zinc-300' />
-						<span className='text-sm sm:text-lgfont-medium text-zinc-500 dark:text-zinc-300'>React</span>
+						<span className='text-sm sm:text-lg font-medium text-zinc-500 dark:text-zinc-300'>React</span>
 					</div>
 
 					<div className='flex gap-2 items-center'>
 						<TailwindIcon width={28} height={28} className='stroke-none fill-zinc-500 dark:fill-zinc-300' />
-						<span className='text-sm sm:text-lgfont-medium text-zinc-500 dark:text-zinc-300'>TailwindCSS</span>
+						<span className='text-sm sm:text-lg font-medium text-zinc-500 dark:text-zinc-300'>TailwindCSS</span>
 					</div>
 
 					<div className='flex gap-2 items-center'>
 						<FramerMotionIcon width={28} height={28} className='fill-none stroke-zinc-500 dark:stroke-zinc-300' />
-						<span className='text-sm sm:text-lgfont-medium text-zinc-500 dark:text-zinc-300'>Framer Motion</span>
+						<span className='text-sm sm:text-lg font-medium text-zinc-500 dark:text-zinc-300'>Framer Motion</span>
 					</div>
 				</div>
 			</div>
