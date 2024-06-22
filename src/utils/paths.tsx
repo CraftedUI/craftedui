@@ -2,10 +2,10 @@ import glob from 'fast-glob';
 
 export async function extractPaths() {
 	try {
-		const pages: string[] = await glob('src/app/**/*.mdx');
+		const pages: string[] = await glob('src/app/\\(content\\)/**/*/page.tsx');
 		const allSectionsEntries = pages.map((filename) =>
 			filename
-				.replace(/(^|\/)page\.mdx$/, '')
+				.replace(/(^|\/)page\.tsx$/, '')
 				.replace('src/app/(content)/', '')
 				.split('/')
 				.filter(Boolean)
