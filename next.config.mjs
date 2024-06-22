@@ -3,8 +3,7 @@ import withMDX from '@next/mdx'
 
 const nextConfig = withMDX()({
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  output: "export",
-  reactStrictMode: true,
+  ppr: true
 })
 
 export default nextConfig;

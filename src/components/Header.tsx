@@ -20,13 +20,15 @@ export default function Header() {
 				<li className='px-1'>
 					<Link
 						href='/components'
-						onClick={() => setactiveNavItem('components')}
+						onClick={() => setactiveNavItem('explore')}
 						className={cn(
 							'transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
-							activeNavItem === 'component' || pathname.includes('/component') ? 'text-black dark:text-white' : ''
+							activeNavItem === 'component' || (pathname !== '/' && pathname !== '/contact')
+								? 'text-black dark:text-white'
+								: ''
 						)}
 					>
-						Components
+						Explore
 					</Link>
 				</li>
 				<li className='px-1'>
