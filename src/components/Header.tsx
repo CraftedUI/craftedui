@@ -12,17 +12,19 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
 	const [openHam, setOpenHam] = useState<boolean>(false);
-	const [activeNavItem, setactiveNavItem] = useState('home');
+	const [activeNavItem, setActiveNavItem] = useState('home');
+
 	const pathname = usePathname();
+
 	const nav = (
 		<nav className='md:flex-1'>
-			<ul className='flex flex-col md:flex-row md:items-center gap-2'>
+			<ul className='flex flex-col md:flex-row md:items-center gap-2 sm:mt-0 mt-24 pl-4 sm:pl-0'>
 				<li className='px-1'>
 					<Link
 						href='/components'
-						onClick={() => setactiveNavItem('explore')}
+						onClick={() => setActiveNavItem('explore')}
 						className={cn(
-							'transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
+							'transition sm:text-sm text-lg text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
 							activeNavItem === 'component' || (pathname !== '/' && pathname !== '/contact')
 								? 'text-black dark:text-white'
 								: ''
@@ -34,9 +36,9 @@ export default function Header() {
 				<li className='px-1'>
 					<Link
 						href='/contact'
-						onClick={() => setactiveNavItem('contact')}
+						onClick={() => setActiveNavItem('contact')}
 						className={cn(
-							'transition text-sm text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
+							'transition sm:text-sm text-lg text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
 							activeNavItem === 'contact' || pathname.includes('/contact') ? 'text-black dark:text-white' : ''
 						)}
 					>
@@ -48,7 +50,7 @@ export default function Header() {
 	);
 
 	const socials = (
-		<div className='flex items-center gap-3'>
+		<div className='flex items-center gap-3 pl-4 sm:pl-0'>
 			<ThemeToggle />
 			<Link
 				href='https://x.com/_CraftedUI'
@@ -108,8 +110,9 @@ export default function Header() {
 			<div
 				className={cn(
 					'md:hidden flex flex-col gap-4 w-full transition-transform px-3 fixed z-50 backdrop-blur-lg backdrop-saturate-150',
-					openHam ? 'h-screen' : 'h-0 overflow-hidden'
+					openHam ? 'h-screen top-0' : 'h-0 overflow-hidden'
 				)}
+				onClick={() => setOpenHam(false)}
 			>
 				{nav}
 				{socials}

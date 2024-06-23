@@ -11,8 +11,8 @@ import { Button } from '@/ui/Button';
 
 export default function Home() {
 	return (
-		<section className=''>
-			<div className='sm:max-w-md md:max-w-xl max-w-xs flex flex-col items-center gap-4 mx-auto relative my-40'>
+		<section>
+			<div className='sm:max-w-md md:max-w-xl max-w-xs flex flex-col items-center gap-6 mx-auto relative sm:my-36 my-40'>
 				<Spotlight className='top-[0%] left-[40%] w-full h-full' />
 				<Logo width={100} height={100} className='bg-black  fill-white dark:bg-white dark:fill-black rounded-2xl' />
 
