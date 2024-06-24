@@ -19,10 +19,12 @@ export default function ContentLayout({
 					<Navigation allSections={allSections} className='hidden lg:mt-[4rem] lg:block' />
 				</div>
 			</motion.header>
-			<div className='relative flex max-h-full min-h-screen flex-col px-4 pt-14 sm:px-6 lg:px-8'>
-				<main className='flex-auto'>{children}</main>
-				<PageNavigation />
-				<Footer />
+			<div className='relative flex max-h-full min-h-screen flex-col pt-14'>
+				<main className='flex-auto sm:px-6 lg:px-8 px-12'>{children}</main>
+				<div className='sm:px-6 lg:px-8 px-12'>
+					<PageNavigation />
+				</div>
+				<Footer padding />
 			</div>
 		</div>
 	);
