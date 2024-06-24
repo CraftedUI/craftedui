@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import cn from '@/utils/cn';
 
-export default function Footer({ padding }: { padding: boolean }) {
+export default function Footer({ padding = false }: { padding?: boolean }) {
 	return (
 		<footer
 			className={cn(
