@@ -9,7 +9,7 @@ type Props = {
 
 export default async function ComponentPreviewCard({ path, imagePath }: Props) {
 	const Component = dynamic(() => import(`../content/${path}.tsx`));
-	const componentDetails = await import(`../app/(content)/${path}/page.tsx`).then((mod) => mod.componentDetails);
+	const componentDetails = await import(`../app/(content)/${path}/data.json`);
 	const { name, desc } = componentDetails;
 	return (
 		<Link
