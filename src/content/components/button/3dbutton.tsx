@@ -8,3 +8,9 @@ const ThreeDButton = () => {
 };
 
 export default ThreeDButton;
+
+export const componentDetails = {
+	name: '3D Button',
+	desc: '3D Button for your nextjs component',
+	libraries: ['Tailwind']
+};

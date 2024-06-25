@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -9,12 +9,36 @@ type Props = {
 
 export default function CodeAndPreviewContent({ path }: Props) {
 	const [isPreview, setIsPreview] = useState(true);
+	const [componentDetails, setComponentDetails] = useState({
+		name: '',
+		desc: '',
+		libraries: []
+	});
 	const Component = dynamic(() => import(`../content/${path}.tsx`));
 	const codestring = require(`!!raw-loader!../content/${path}.tsx`).default;
+
+	async function fetchComponentDetails() {
+		const _componentDetails = await import(`../content/${path}.tsx`).then((mod) => mod.componentDetails);
+		setComponentDetails(_componentDetails);
+	}
+	useEffect(() => {
+		fetchComponentDetails();
+	}, []);
+
+	const { name, desc, libraries } = componentDetails;
 	return (
-		<section>
+		<section className='flex flex-col gap-6'>
+			<h1>Name: {name}</h1>
+			<span>Desc: {desc}</span>
+
+			<ol>
+				Libraries:
+				{libraries.map((lib: string) => (
+					<li key={lib}>{lib}</li>
+				))}
+			</ol>
 			<button className='p-2 bg-zinc-400 rounded-lg' onClick={() => setIsPreview((prev) => !prev)}>
-				change
+				Show {isPreview ? 'Code' : 'Preview'}
 			</button>
 			{isPreview ? (
 				<Component />
