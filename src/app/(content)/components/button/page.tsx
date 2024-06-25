@@ -1,6 +1,5 @@
 import ComponentPreviewCard from '@/components/ComponentPreviewCard';
 import { glob } from 'fast-glob';
-import Link from 'next/link';
 
 async function Button() {
 	const pages: string[] = await glob('src/app/\\(content\\)/components/button/*/page.tsx');

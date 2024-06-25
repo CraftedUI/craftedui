@@ -1,5 +1,3 @@
-'use client';
-import { componentDetails } from '@/content/components/button/3dbutton';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,8 +9,7 @@ type Props = {
 
 export default async function ComponentPreviewCard({ path, imagePath }: Props) {
 	const Component = dynamic(() => import(`../content/${path}.tsx`));
-	const componentDetails = await import(`../content/${path}.tsx`).then((mod) => mod.componentDetails);
-
+	const componentDetails = await import(`../app/(content)/${path}/page.tsx`).then((mod) => mod.componentDetails);
 	const { name, desc } = componentDetails;
 	return (
 		<Link
