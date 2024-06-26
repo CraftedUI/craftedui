@@ -22,6 +22,7 @@ export async function extractPaths() {
 				result[category].push(subcategory);
 			}
 		});
+		allSectionsEntries.sort();
 		return result;
 	} catch (error) {
 		console.error('Error extracting sections:', error);

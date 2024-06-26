@@ -9,7 +9,7 @@ export default function Footer({ padding = false }: { padding?: boolean }) {
 				padding ? 'sm:px-8' : ''
 			)}
 		>
-			<div className='text-sm dark:text-zinc-400 text-zinc-500  font-medium'>
+			<div className='text-sm dark:text-zinc-400 text-zinc-500'>
 				Building in public by{' '}
 				<Link href='https://x.com/ShubhInTech' target='_blank' className='font-semibold underline underline-offset-2'>
 					@shubhintech
@@ -20,10 +20,10 @@ export default function Footer({ padding = false }: { padding?: boolean }) {
 				</Link>
 			</div>
 
-			<div className='grid grid-cols-2 gap-8 dark:text-zinc-400 text-zinc-500 text-sm '>
+			<div className='grid grid-cols-2 gap-8 dark:text-zinc-400 text-zinc-500 text-sm'>
 				<ul className='space-y-2'>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
-						<Link href='/components'>Explore</Link>
+						<Link href='/explore'>Explore</Link>
 					</li>
 					<li className='hover:text-zinc-600 dark:hover:text-zinc-300'>
 						<Link href='/contact'>Contact</Link>

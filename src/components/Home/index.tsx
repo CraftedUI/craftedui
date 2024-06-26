@@ -25,7 +25,7 @@ export default function Home() {
 				</span>
 
 				<div className='flex sm:flex-row items-center gap-8 self-start mt-4'>
-					<Button as='a' href='/components' className='hover:shadow-xl md:w-48 w-28 !rounded-lg' size='xl'>
+					<Button as='a' href='/explore' className='hover:shadow-xl md:w-48 w-28 !rounded-lg' size='xl'>
 						<span className='font-semibold'>Explore</span>
 					</Button>
 					<Button
