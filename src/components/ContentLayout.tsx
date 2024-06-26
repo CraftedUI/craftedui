@@ -22,7 +22,7 @@ export default function ContentLayout({
 			<div className='relative flex max-h-full min-h-screen flex-col pt-14'>
 				<main className='flex-auto sm:px-6 lg:px-8 px-12'>{children}</main>
 				<div className='sm:px-6 lg:px-8 px-12'>
-					<PageNavigation />
+					<PageNavigation allSections={allSections} />
 				</div>
 				<Footer padding />
 			</div>

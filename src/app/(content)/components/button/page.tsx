@@ -1,17 +1,12 @@
-import ComponentPreviewCard from '@/components/ComponentPreviewCard';
-import { glob } from 'fast-glob';
+import SpecificContentPage from '@/components/SpecificContentPage';
 
-async function Button() {
-	const pages: string[] = await glob('src/app/\\(content\\)/components/button/*/page.tsx');
-	const allSectionsEntries = pages.map((filename) =>
-		filename.replace(/(^|\/)page\.tsx$/, '').replace('src/app/(content)/components/button/', '')
-	);
+function Button() {
 	return (
-		<div>
-			{allSectionsEntries.map((comp) => (
-				<ComponentPreviewCard key={comp} path={`components/button/${comp}`} />
-			))}
-		</div>
+		<SpecificContentPage
+			globUrl='src/app/\(content\)/components/button/*/page.tsx'
+			globPrefixUrl='src/app/(content)/components/button/'
+			cardUrl='components/button/'
+		/>
 	);
 }
 

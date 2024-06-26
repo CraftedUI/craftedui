@@ -21,11 +21,11 @@ export default function Header() {
 			<ul className='flex flex-col md:flex-row md:items-center gap-2 sm:mt-0 mt-24 pl-4 sm:pl-0'>
 				<li className='px-1'>
 					<Link
-						href='/components'
+						href='/explore'
 						onClick={() => setActiveNavItem('explore')}
 						className={cn(
 							'transition sm:text-sm text-lg text-zinc-600 hocus:text-black dark:text-zinc-400 dark:hocus:text-white',
-							activeNavItem === 'component' || (pathname !== '/' && pathname !== '/contact')
+							activeNavItem === 'explore' || (pathname !== '/' && pathname !== '/contact')
 								? 'text-black dark:text-white'
 								: ''
 						)}
