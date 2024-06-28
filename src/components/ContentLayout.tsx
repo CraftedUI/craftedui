@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import Navigation from './Navigation';
-import PageNavigation from './PageNavigation';
 
 export default function ContentLayout({
 	children,
@@ -19,11 +18,11 @@ export default function ContentLayout({
 					<Navigation allSections={allSections} className='hidden lg:mt-[4rem]' />
 				</div>
 			</motion.header>
-			<div className='relative flex max-h-full min-h-screen flex-col pt-14'>
-				<main className='flex-auto sm:px-6 lg:px-8 px-12'>{children}</main>
-				<div className='sm:px-6 lg:px-8 px-12'>
+			<div className='relative flex max-h-full min-h-screen flex-col md:p-14 p-6'>
+				<main className='flex-auto'>{children}</main>
+				{/* <div className='sm:px-6 lg:px-8 px-12'>
 					<PageNavigation allSections={allSections} />
-				</div>
+				</div> */}
 				<Footer padding />
 			</div>
 		</div>

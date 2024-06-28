@@ -1,9 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import dynamic from 'next/dynamic';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-type CodeAndPreviewContentProps = {
+import cn from '@/utils/cn';
+type CodeAndPreviewProps = {
 	path: string;
 	componentDetails: {
 		name: string;
@@ -12,7 +13,11 @@ type CodeAndPreviewContentProps = {
 	};
 };
 
-export default function CodeAndPreviewContent({ path, componentDetails }: CodeAndPreviewContentProps) {
+export default function PreviewContent({ children, className }: { children?: ReactNode; className?: string }) {
+	return <section className={cn('flex flex-col', className)}>{children}</section>;
+}
+
+PreviewContent.CodeAndPreview = function ({ path, componentDetails }: CodeAndPreviewProps) {
 	const [isPreview, setIsPreview] = useState(true);
 
 	const Component = dynamic(() => import(`../content/${path}.tsx`));
@@ -40,4 +45,4 @@ export default function CodeAndPreviewContent({ path, componentDetails }: CodeAn
 			)}
 		</section>
 	);
-}
+};
