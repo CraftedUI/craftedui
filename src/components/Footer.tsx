@@ -3,15 +3,14 @@ import cn from '@/utils/cn';
 import { PropsWithChildren } from 'react';
 import LogoIcon from '@/icons/Logo';
 
-export default function Footer({ padding = false }: { padding?: boolean }) {
+export default function Footer() {
 	const ListItem = (props: PropsWithChildren) => (
 		<li className='hover:text-zinc-600 dark:hover:text-zinc-300 text-xs'>{props.children}</li>
 	);
 	return (
 		<footer
 			className={cn(
-				'mx-auto flex flex-col sm:flex-row gap-12 sm:gap-0 justify-between w-full border-t border-zinc-300 dark:border-zinc-700 py-7 my-7 px-12 sm:px-0 backdrop-blur-lg',
-				padding ? 'sm:px-8' : ''
+				'mx-auto flex flex-col sm:flex-row gap-12 sm:gap-0 justify-between w-full border-t border-zinc-300 dark:border-zinc-700 my-7 py-8 px-6 backdrop-blur-lg'
 			)}
 		>
 			<div className='flex flex-col gap-2'>

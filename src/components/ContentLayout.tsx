@@ -23,7 +23,7 @@ export default function ContentLayout({
 				{/* <div className='sm:px-6 lg:px-8 px-12'>
 					<PageNavigation allSections={allSections} />
 				</div> */}
-				<Footer padding />
+				<Footer />
 			</div>
 		</div>
 	);
