@@ -1,6 +1,5 @@
 'use client';
 import Hamburger from '@/icons/Hamburger';
-import Logo from '@/icons/Logo';
 import Link from 'next/link';
 import Search from './Search';
 import ThemeToggle from './ThemeToggle';
@@ -10,6 +9,7 @@ import cn from '@/utils/cn';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Navigation from './Navigation';
+import LogoIcon from '@/icons/Logo';
 
 export default function Header({ paths }: { paths: Record<string, string[]> }) {
 	const [openHam, setOpenHam] = useState<boolean>(false);
@@ -54,7 +54,7 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 		<div className='flex items-center gap-3 pl-4 sm:pl-0'>
 			<ThemeToggle />
 			<Link
-				href='https://x.com/_CraftedUI'
+				href='https://x.com/Crafted_UI'
 				target='_blank'
 				className='p-1 rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5'
 			>
@@ -82,10 +82,14 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 				<div className='flex items-center gap-6'>
 					<Link href='/'>
 						<div className='flex items-center gap-1'>
-							<Logo withoutBg className='fill-black dark:fill-white' width={36} height={36} />
+							<LogoIcon
+								className='fill-white dark:fill-black bg-black dark:bg-white rounded-md'
+								width={30}
+								height={30}
+							/>
 							<div className=''>
-								<span className='text-base font-medium text-zinc-800 dark:text-zinc-200'>Crafted</span>
-								<span className='text-primary-600 text-xs font-semibold pl-0.5'>UI</span>
+								<span className='text-lg font-semibold text-zinc-800 dark:text-zinc-200'>Crafted</span>
+								<span className='text-primary-600 dark:text-primary-500 text-sm font-semibold pl-0.5'>UI</span>
 							</div>
 						</div>
 					</Link>

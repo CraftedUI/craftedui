@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import cn from '@/utils/cn';
 import { PropsWithChildren } from 'react';
+import LogoIcon from '@/icons/Logo';
 
 export default function Footer({ padding = false }: { padding?: boolean }) {
 	const ListItem = (props: PropsWithChildren) => (
@@ -13,21 +14,30 @@ export default function Footer({ padding = false }: { padding?: boolean }) {
 				padding ? 'sm:px-8' : ''
 			)}
 		>
-			<div className='text-xs dark:text-zinc-400 text-zinc-500'>
-				<div>
+			<div className='flex flex-col gap-2'>
+				<Link href='/'>
+					<div className='flex items-center gap-1'>
+						<LogoIcon className='fill-white dark:fill-black bg-black dark:bg-white rounded-md' width={28} height={28} />
+						<div className=''>
+							<span className='text-lg font-semibold text-zinc-800 dark:text-zinc-200'>Crafted</span>
+							<span className='text-primary-600 dark:text-primary-500 text-sm font-semibold pl-0.5'>UI</span>
+						</div>
+					</div>
+				</Link>
+				<div className='text-xs dark:text-zinc-400 text-zinc-500 mt-2'>
 					Building in public at&nbsp;
-					<Link href='https://x.com/Crafted_UI' target='_blank' className='font-semibold underline underline-offset-2'>
+					<Link href='https://x.com/Crafted_UI' target='_blank' className='font-semibold'>
 						Crafted UI
 					</Link>
 				</div>
 
-				<div className=''>
+				<div className='text-xs dark:text-zinc-400 text-zinc-500'>
 					By&nbsp;
-					<Link href='https://x.com/ShubhInTech' target='_blank' className='font-semibold underline underline-offset-2'>
+					<Link href='https://x.com/ShubhInTech' target='_blank' className='font-semibold'>
 						@shubhintech
 					</Link>
 					{' and '}
-					<Link href='https://x.com/Dinezh256' target='_blank' className='font-semibold underline underline-offset-2'>
+					<Link href='https://x.com/Dinezh256' target='_blank' className='font-semibold'>
 						@dinezh256
 					</Link>
 				</div>
@@ -35,6 +45,9 @@ export default function Footer({ padding = false }: { padding?: boolean }) {
 
 			<div className='grid grid-cols-2 gap-8 dark:text-zinc-400 text-zinc-500 text-sm'>
 				<ul className='space-y-2'>
+					<ListItem>
+						<Link href='/'>Home</Link>
+					</ListItem>
 					<ListItem>
 						<Link href='/explore'>Explore</Link>
 					</ListItem>
