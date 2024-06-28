@@ -1,12 +1,12 @@
 'use client';
 import Moon from '@/icons/Moon';
 import Sun from '@/icons/Sun';
-import Theme from '@/icons/Sun';
 import { useTheme } from 'next-themes';
 
 export default function ThemeToggle() {
-	let { resolvedTheme, setTheme } = useTheme();
-	let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+	const { resolvedTheme, setTheme } = useTheme();
+	const otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+
 	return (
 		<button
 			className='p-1 rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5'
