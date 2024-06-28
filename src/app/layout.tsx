@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import Providers from '@/providers';
 import Header from '@/components/Header';
 
 import './globals.css';
 import { extractPaths } from '@/utils/paths';
 
-const inter = Inter({ subsets: ['latin'] });
+const workSans = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Crafted UI',
@@ -24,7 +24,7 @@ export default async function RootLayout({
 	});
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
+			<body className={workSans.className}>
 				<Providers>
 					<Header paths={paths} />
 					{children}
