@@ -74,14 +74,14 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 		<>
 			<header
 				className={cn(
-					'w-full px-8 py-2 fixed top-0 z-50 h-auto',
+					'w-full px-8 py-6 fixed top-0 z-50 h-auto',
 					'backdrop-blur-sm backdrop-saturate-150',
 					'flex items-center justify-between'
 				)}
 			>
 				<div className='flex items-center gap-6'>
 					<Link href='/'>
-						<div className='flex items-center gap-1'>
+						<div className='flex items-center gap-3'>
 							<LogoIcon
 								className='fill-white dark:fill-black bg-black dark:bg-white rounded-md'
 								width={30}
@@ -103,8 +103,8 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 
 					<Hamburger
 						onClick={() => setOpenHam((prev) => !prev)}
-						height={20}
-						width={20}
+						height={24}
+						width={24}
 						className='block sm:hidden cursor-pointer stroke-zinc-500 dark:stroke-zinc-200'
 					/>
 				</div>
