@@ -50,7 +50,13 @@ export default function Search() {
 	}, [isOpen, setIsOpen]);
 
 	return (
-		<div className='hidden md:block md:max-w-md '>
+		<div className='hidden sm:block md:max-w-md '>
+			<SearchIcon
+				width={18}
+				height={18}
+				onClick={() => setIsOpen(true)}
+				className='stroke-zinc-500 fill-none block md:hidden   cursor-pointer '
+			/>
 			<button
 				type='button'
 				onClick={() => setIsOpen(true)}

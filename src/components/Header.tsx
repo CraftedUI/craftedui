@@ -1,6 +1,5 @@
 'use client';
 import Hamburger from '@/icons/Hamburger';
-import Logo from '@/icons/Logo';
 import Link from 'next/link';
 import Search from './Search';
 import ThemeToggle from './ThemeToggle';
@@ -9,16 +8,18 @@ import Github from '@/icons/Github';
 import cn from '@/utils/cn';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Navigation from './Navigation';
+import LogoIcon from '@/icons/Logo';
 
-export default function Header() {
+export default function Header({ paths }: { paths: Record<string, string[]> }) {
 	const [openHam, setOpenHam] = useState<boolean>(false);
-	const [activeNavItem, setActiveNavItem] = useState('home');
+	const [activeNavItem, setActiveNavItem] = useState<string>('home');
 
 	const pathname = usePathname();
 
 	const nav = (
-		<nav className='md:flex-1'>
-			<ul className='flex flex-col md:flex-row md:items-center gap-2 sm:mt-0 mt-24 pl-4 sm:pl-0'>
+		<nav className='sm:flex-1'>
+			<ul className='flex flex-col sm:flex-row sm:items-center gap-2 sm:mt-0 mt-24 pl-4 sm:pl-0'>
 				<li className='px-1'>
 					<Link
 						href='/explore'
@@ -53,7 +54,7 @@ export default function Header() {
 		<div className='flex items-center gap-3 pl-4 sm:pl-0'>
 			<ThemeToggle />
 			<Link
-				href='https://x.com/_CraftedUI'
+				href='https://x.com/Crafted_UI'
 				target='_blank'
 				className='p-1 rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5'
 			>
@@ -76,46 +77,49 @@ export default function Header() {
 					'w-full px-8 py-2 fixed top-0 z-50 h-auto',
 					'backdrop-blur-sm backdrop-saturate-150',
 					'flex items-center justify-between'
-					// 'border border-b-zinc-300 dark:border-b-zinc-700'
 				)}
 			>
 				<div className='flex items-center gap-6'>
 					<Link href='/'>
 						<div className='flex items-center gap-1'>
-							<Logo withoutBg className='fill-black dark:fill-white' width={36} height={36} />
+							<LogoIcon
+								className='fill-white dark:fill-black bg-black dark:bg-white rounded-md'
+								width={30}
+								height={30}
+							/>
 							<div className=''>
-								<span className='text-base font-medium text-zinc-800 dark:text-zinc-200'>Crafted</span>
-								<span className='text-primary-600 text-xs font-semibold pl-0.5'>UI</span>
+								<span className='text-lg font-semibold text-zinc-800 dark:text-zinc-200'>Crafted</span>
+								<span className='text-primary-600 dark:text-primary-500 text-sm font-semibold pl-0.5'>UI</span>
 							</div>
 						</div>
 					</Link>
 
-					<div className='hidden md:block'>{nav}</div>
+					<div className='hidden sm:block'>{nav}</div>
 				</div>
 
 				<div className='flex gap-8 items-center'>
 					<Search />
-
-					<div className='md:block hidden'>{socials}</div>
+					<div className='sm:block hidden'>{socials}</div>
 
 					<Hamburger
 						onClick={() => setOpenHam((prev) => !prev)}
 						height={20}
 						width={20}
-						className='block md:hidden cursor-pointer stroke-zinc-500 dark:stroke-zinc-200'
+						className='block sm:hidden cursor-pointer stroke-zinc-500 dark:stroke-zinc-200'
 					/>
 				</div>
 			</header>
 
 			<div
 				className={cn(
-					'md:hidden flex flex-col gap-4 w-full transition-transform px-3 fixed z-50 backdrop-blur-lg backdrop-saturate-150',
+					'sm:hidden flex flex-col gap-4 w-full transition-transform px-3 fixed z-50 backdrop-blur-lg backdrop-saturate-150',
 					openHam ? 'h-screen top-0' : 'h-0 overflow-hidden'
 				)}
 				onClick={() => setOpenHam(false)}
 			>
 				{nav}
 				{socials}
+				<Navigation allSections={paths} />
 			</div>
 		</>
 	);

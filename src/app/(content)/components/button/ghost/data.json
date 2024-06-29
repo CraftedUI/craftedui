@@ -1,0 +1,6 @@
+{
+	"name": "Ghost",
+	"desc": "Ghost Button for your nextjs component",
+	"libraries": ["Tailwind"],
+	"imageSrc": ""
+}
