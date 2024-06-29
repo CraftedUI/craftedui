@@ -74,7 +74,7 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 		<>
 			<header
 				className={cn(
-					'w-full px-8 py-6 fixed top-0 z-50 h-auto',
+					'w-full px-8 py-3 fixed top-0 z-50 h-auto',
 					'backdrop-blur-sm backdrop-saturate-150',
 					'flex items-center justify-between'
 				)}
