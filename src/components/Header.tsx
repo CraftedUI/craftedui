@@ -80,7 +80,7 @@ export default function Header({ paths }: { paths: Record<string, string[]> }) {
 				)}
 			>
 				<div className='flex items-center gap-6'>
-					<Link href='/'>
+					<Link href='/' onClick={() => setActiveNavItem('home')}>
 						<div className='flex items-center gap-3'>
 							<LogoIcon
 								className='fill-white dark:fill-black bg-black dark:bg-white rounded-md'
