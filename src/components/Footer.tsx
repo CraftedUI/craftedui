@@ -10,7 +10,7 @@ export default function Footer() {
 	return (
 		<footer
 			className={cn(
-				'mx-auto flex flex-col sm:flex-row gap-12 sm:gap-0 justify-between w-full border-t border-zinc-300 dark:border-zinc-700 my-7 py-8 px-6 backdrop-blur-lg'
+				'mx-auto flex flex-col sm:flex-row gap-12 sm:gap-0 justify-between w-full border-t border-zinc-300 dark:border-zinc-700 my-7 py-8 px-8 backdrop-blur-lg'
 			)}
 		>
 			<div className='flex flex-col gap-2'>

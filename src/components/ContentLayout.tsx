@@ -18,8 +18,8 @@ export default function ContentLayout({
 					<Navigation allSections={allSections} className='hidden lg:mt-[4rem]' />
 				</div>
 			</motion.header>
-			<div className='relative flex max-h-full min-h-screen flex-col md:p-14 px-6 py-14'>
-				<main className='flex-auto'>{children}</main>
+			<div className='relative flex max-h-full min-h-screen flex-col'>
+				<main className='flex-auto md:p-14 px-8 py-14'>{children}</main>
 				{/* <div className='sm:px-6 lg:px-8 px-12'>
 					<PageNavigation allSections={allSections} />
 				</div> */}

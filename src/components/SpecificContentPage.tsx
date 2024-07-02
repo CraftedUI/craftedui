@@ -11,7 +11,7 @@ export default async function SpecificContentPage({ title, contents, cardUrl }: 
 	return (
 		<>
 			<h1 className='capitalize font-bold text-2xl'>{title}</h1>
-			<div className='flex flex-wrap lg:gap-8 md:gap-6 gap-4 transition-all my-4'>
+			<div className='flex flex-wrap lg:gap-8 md:gap-6 gap-4 transition-all my-4 ml-[-1.25rem] sm:ml-0'>
 				{contents.map((content) => (
 					<ComponentPreviewCard key={content} path={`${cardUrl}${content}`} />
 				))}
